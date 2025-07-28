@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidra - Download de Vídeos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/static/img/icon.ico" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-header">
+        <img src="/static/img/logo.png" alt="Vidra Logo" class="logo-img" />
+      </div>
+
+      <form id="downloadForm">
+        <input
+          type="text"
+          name="url"
+          placeholder="Cole a URL do vídeo"
+          required
+        />
+
+        <select name="plataforma" required>
+          <option value="" disabled selected>Escolha a plataforma</option>
+          <option value="youtube.com" data-icon="fab fa-youtube">
+            YouTube
+          </option>
+          <option value="tiktok.com" data-icon="fab fa-tiktok">TikTok</option>
+          <option value="instagram.com" data-icon="fab fa-instagram">
+            Instagram
+          </option>
+        </select>
+
+        <select name="tipo" required>
+          <option value="" disabled selected>Tipo de download</option>
+          <option value="1">Vídeo com áudio (MP4)</option>
+          <option value="2">Somente áudio (MP3)</option>
+          <option value="3">Somente vídeo (sem áudio)</option>
+        </select>
+
+        <input
+          type="text"
+          name="nome"
+          placeholder="Nome do arquivo (opcional)"
+        />
+
+        <button type="submit">DOWNLOAD</button>
+      </form>
+
+      <div id="mensagem" style="margin-top: 15px"></div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
